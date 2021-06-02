@@ -68,16 +68,21 @@ main{
     gap: 20px;
 }
 
-.container{
+.container, .modal-price, .modal-checking-copy{
     width: 30vw;
     padding: 10px;
+    
     border: 1px solid #080078;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px #474747;
+    background-color: #ffffff;
+    
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.container h2{
+.container h2, .modal-price h2, .modal-checking-copy h2{
     width: 100%;
     
     font-size: 30px;
@@ -94,7 +99,7 @@ main{
 }
 
 .input-name{
-    width: 20%;
+    width: 35%;
     text-align: right;
 
     display: flex;
@@ -104,13 +109,14 @@ main{
 
 .input-name h3{
     width: 100%;
+    padding-top: 0px;
 
-    font-size: 20px;
+    font-size: 18px;
     color: #474747;
 }
 
 .input{
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 25px; 
@@ -118,10 +124,10 @@ main{
 
 .input > input{
     width: 100%;
-    height: 25px;
+    height: 20px;
     padding-left: 5px;
     
-    font-size: 16px;
+    font-size: 18px;
     color: #474747;
     border-radius: 8px;
     border-style: none;
@@ -183,6 +189,65 @@ main{
 .table tbody td{
     height: 60px;
     padding-left: 10px;
+}
+
+/**/
+/**/
+/**/
+/**/
+
+.modal-content{
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -500;
+
+    display: flex;
+    justify-content: center;
+    
+    background-color: #47474791;
+    opacity: 0;
+}
+
+
+.modal-price{
+    width: 40vw;
+    margin-top: 90px;
+    
+    position: fixed;
+    z-index: -200;
+    opacity: 0;
+}
+
+.modal-checking-copy input{
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #080078;
+
+    cursor: initial;
+}
+
+.modal-checking-copy{
+    width: 40vw;
+    margin-top: 90px;
+    
+    position: fixed;
+
+    z-index: -300;
+    opacity: 0;
+}
+
+.title-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.title-logo > h2{
+    width: 50%;
+    margin-top: 10px;
 }
 
 
