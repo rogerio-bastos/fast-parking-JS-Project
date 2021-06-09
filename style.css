@@ -203,22 +203,43 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -500;
+    z-index: -10;
 
     display: flex;
     justify-content: center;
     
-    background-color: #47474791;
+    background-color: #08007865;
     opacity: 0;
 }
 
+.modal-content.active{
+    z-index: 10;
+    opacity: 1;
+}
 
 .modal-price{
     width: 40vw;
     margin-top: 90px;
     
     position: fixed;
-    z-index: -200;
+    z-index: -9;
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+.modal-price.active{
+    z-index: 9;
+    opacity: 1;
+}
+
+.modal-checking-copy{
+    width: 40vw;
+    margin-top: 90px;
+    
+    position: fixed;
+
+    z-index: -8;
     opacity: 0;
 }
 
@@ -228,16 +249,6 @@ main{
     border-bottom: 1px solid #080078;
 
     cursor: initial;
-}
-
-.modal-checking-copy{
-    width: 40vw;
-    margin-top: 90px;
-    
-    position: fixed;
-
-    z-index: -300;
-    opacity: 0;
 }
 
 .title-logo{

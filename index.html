@@ -36,10 +36,10 @@
             </div>
             <div class="container-buttons">
                 <button class="button" id="add">Adicionar</button>
-                <button class="button">Preços</button>
+                <button class="button" id="price">Preços</button>
             </div>
         </div>
-        <table class="table">
+        <table class="table" id="table">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -50,32 +50,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Neymar</td>
-                    <td>KLM-985</td>
-                    <td>11/08/2000</td>
-                    <td>15:45</td>
-                    <td>
-                        <button class="button">Comprovante</button>
-                        <button class="button">Editar</button>
-                        <button class="button" id="blue">Saída</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Neymar</td>
-                    <td>KLM-985</td>
-                    <td>11/08/2000</td>
-                    <td>15:45</td>
-                    <td>
-                        <button class="button">Comprovante</button>
-                        <button class="button">Editar</button>
-                        <button class="button" id="blue">Saída</button>
-                    </td>
-                </tr>
+
             </tbody>
         </table>
-        <div class="modal-content">
-            <div class="modal-price">
+        <div class="modal-content" id="modal-content">
+            <div class="modal-price" id="modal-price">
                 <h2>Preços</h2>
                 <div class="container-input">
                     <div class="input-name">
@@ -89,7 +68,7 @@
                 </div>
                 <div class="container-buttons">
                     <button class="button">Salvar</button>
-                    <button class="button">Cancelar</button>
+                    <button class="button" id="modal-price-cancel">Cancelar</button>
                 </div>
             </div>
             <div class="modal-checking-copy">
@@ -113,7 +92,7 @@
                 </div>
                 <div class="container-buttons">
                     <button class="button">Imprimir</button>
-                    <button class="button">Cancelar</button>
+                    <button class="button" id="blue">Cancelar</button>
                 </div>
             </div>
         </div>
