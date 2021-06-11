@@ -82,6 +82,10 @@ main{
     gap: 25px;
 }
 
+.container.edit{
+    z-index: 11;
+}
+
 .container h2, .modal-price h2, .modal-checking-copy h2{
     width: 100%;
     
@@ -111,7 +115,7 @@ main{
     width: 100%;
     padding-top: 0px;
 
-    font-size: 18px;
+    font-size: 16px;
     color: #474747;
 }
 
@@ -175,7 +179,7 @@ main{
    text-align: center;
 }
 
-.table tbody td:last-child > #blue{
+.table tbody td:last-child > #clientOut{
     background-color: #080078;
 }
 
@@ -217,6 +221,11 @@ main{
     opacity: 1;
 }
 
+.modal-content.edit{
+    z-index: 10;
+    opacity: 1;
+}
+
 .modal-price{
     width: 40vw;
     margin-top: 90px;
@@ -234,7 +243,7 @@ main{
 }
 
 .modal-checking-copy{
-    width: 40vw;
+    width: 50vw;
     margin-top: 90px;
     
     position: fixed;
@@ -243,12 +252,21 @@ main{
     opacity: 0;
 }
 
+.modal-checking-copy.active{
+    z-index: 8;
+    opacity: 1;
+}
+
 .modal-checking-copy input{
     border: none;
     border-radius: 0px;
     border-bottom: 1px solid #080078;
 
     cursor: initial;
+}
+
+#printCheckingcopy.print, #cancelCheckingcopy.print{
+    opacity: 0;
 }
 
 .title-logo{

@@ -20,23 +20,23 @@
         <span></span>
     </header>
     <main>
-        <div class="container">
+        <div class="container" id="container">
             <h2>Entrada</h2>
             <div class="container-input">
                 <div class="input-name">
                     <h3>Nome</h3>
                     <h3>Placa</h3>
                 </div>
-                <form>
+                <form class="form">
                     <div class="input">
-                        <input type="text" name="clientName" id="clientName" placeholder="Nome">
-                        <input type="text" name="licensePlate" id="licensePlate" placeholder="Placa">
+                        <input type="text" name="clientName" id="clientName" data-index="" placeholder="Nome" required>
+                        <input type="text" name="licensePlate" id="licensePlate" placeholder="Placa" required>
                     </div>
                 </form>
             </div>
             <div class="container-buttons">
-                <button class="button" id="add">Adicionar</button>
-                <button class="button" id="price">Preços</button>
+                <button class="button" id="addClient">Adicionar</button>
+                <button class="button" id="addPrice">Preços</button>
             </div>
         </div>
         <table class="table" id="table">
@@ -58,20 +58,22 @@
                 <h2>Preços</h2>
                 <div class="container-input">
                     <div class="input-name">
-                        <h3>Primeira Hora</h3>
-                        <h3>Demais Horas</h3>
+                        <h3>Primeira Hora (R$)</h3>
+                        <h3>Demais Horas (R$)</h3>
                     </div>
-                    <div class="input">
-                        <input type="text" name="firstHour" placeholder="Primeira Hora">
-                        <input type="text" name="overHours" placeholder="Demais Horas">
-                    </div>
+                    <form class="form">
+                        <div class="input">
+                            <input type="text" name="firstHour" id="firstHour" placeholder="Primeira Hora">
+                            <input type="text" name="overHours" id="overHours" placeholder="Demais Horas">
+                        </div>
+                    </form>
                 </div>
                 <div class="container-buttons">
-                    <button class="button">Salvar</button>
-                    <button class="button" id="modal-price-cancel">Cancelar</button>
+                    <button class="button" id="savePrice">Salvar</button>
+                    <button class="button" id="cancelPrice">Cancelar</button>
                 </div>
             </div>
-            <div class="modal-checking-copy">
+            <div class="modal-checking-copy" id="modal-checking-copy">
                 <div class="title-logo">
                     <h2>Comprovante</h2>
                     <img src="./images/fastParkingLogo.png" alt="logo" class="imageLogo">
@@ -83,16 +85,16 @@
                         <h3>Data</h3>
                         <h3>Hora</h3>
                     </div>
-                    <div class="input">
-                        <input type="text" name="name" placeholder="Primeira Hora" readonly>
-                        <input type="text" name="licensePlate" placeholder="Placa" readonly>
-                        <input type="text" name="data" placeholder="Data" readonly>
-                        <input type="text" name="hour" placeholder="Hora" readonly>
+                    <div class="input" id="input">
+                        <input type="text" name="name" placeholder="Nome" id="nameChecking" readonly>
+                        <input type="text" name="licensePlate" placeholder="Placa" id="licensePlateChecking" readonly>
+                        <input type="text" name="data" placeholder="Data" id="dataChecking" readonly>
+                        <input type="text" name="hour" placeholder="Hora" id="hourChecking" readonly>
                     </div>
                 </div>
                 <div class="container-buttons">
-                    <button class="button">Imprimir</button>
-                    <button class="button" id="blue">Cancelar</button>
+                    <button class="button" id="printCheckingcopy">Imprimir</button>
+                    <button class="button" id="cancelCheckingcopy">Cancelar</button>
                 </div>
             </div>
         </div>
