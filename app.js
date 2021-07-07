@@ -116,6 +116,17 @@ const readPrice = () => JSON.parse(localStorage.getItem("price")) ?? [];
 
 const setPrice = (price) => localStorage.setItem("price", JSON.stringify(price));
 
+console.log(readPrice());
+
+const isSetPrice = () => {
+    if (readPrice() == ""){
+        alert ("Adicione o preço para continuar.");
+        return false;
+    }else{
+        return true;
+    }
+}
+
 const price = () => {
     const price = readPrice();
     const newPrice = {
@@ -155,7 +166,7 @@ const clientCheckingcopy = (index) => {
         dataChecking.value = db[dbLastOne].day;
         hourChecking.value = db[dbLastOne].hour;
     }
-    console.log(dbLastOne);
+    
     openCheckingCopy();
 }
 
@@ -325,7 +336,7 @@ const actionsButtonsCheckingPrice = (event) => {
     }
 }
 
-addClient.addEventListener("click", () => { newClient(); cleanClientsInInputs(); });
+addClient.addEventListener("click", () => { if(isSetPrice()){ newClient(); cleanClientsInInputs(); } });
 addPrice.addEventListener("click", openPriceModal);
 
 savePrice.addEventListener("click", () => { price(); cleanPriceInputs(); });
@@ -338,7 +349,3 @@ document.querySelector("#table").addEventListener("click", actions);
 modalContent.addEventListener("click", actionsButtonsCheckingPrice);
 
 loadClientsTable();
-
-
-
-
